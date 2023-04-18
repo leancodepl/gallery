@@ -1,5 +1,6 @@
 import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
+import 'package:gallery/keys.dart';
 import 'package:gallery/layout/adaptive.dart';
 import 'package:gallery/studies/reply/colors.dart';
 import 'package:gallery/studies/reply/mail_view_page.dart';
@@ -59,7 +60,7 @@ class MailPreviewCard extends StatelessWidget {
           return mailPreview;
         } else {
           return Dismissible(
-            key: ObjectKey(email),
+            key: K.mailList,
             dismissThresholds: const {
               DismissDirection.startToEnd: 0.8,
               DismissDirection.endToStart: 0.4,

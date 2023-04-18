@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gallery/keys.dart';
 import 'package:gallery/studies/reply/model/email_store.dart';
 import 'package:provider/provider.dart';
 
@@ -49,6 +50,7 @@ class ComposePage extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.all(12),
                     child: TextField(
+                      key: K.mailTextContent,
                       minLines: 6,
                       maxLines: 20,
                       decoration: const InputDecoration.collapsed(
@@ -112,6 +114,7 @@ class _SubjectRowState extends State<_SubjectRow> {
           ),
           Expanded(
             child: TextField(
+              key: K.subjectTextField,
               controller: _subjectController,
               maxLines: 1,
               autofocus: false,
@@ -127,6 +130,7 @@ class _SubjectRowState extends State<_SubjectRow> {
           IconButton(
             onPressed: () => Navigator.of(context).pop(),
             icon: IconButton(
+              key: K.mailSendButton,
               icon: ImageIcon(
                 const AssetImage(
                   'reply/icons/twotone_send.png',
