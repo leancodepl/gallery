@@ -1223,11 +1223,7 @@ class _ReplyFabState extends State<_ReplyFab>
               return Tooltip(
                 message: tooltip,
                 child: InkWell(
-<<<<<<< Updated upstream
                   key: K.replyFab,
-=======
-                  key: K.ReplyFab,
->>>>>>> Stashed changes
                   customBorder: circleFabBorder,
                   onTap: openContainer,
                   child: SizedBox(

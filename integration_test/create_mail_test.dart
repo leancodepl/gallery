@@ -5,15 +5,9 @@ import 'src/common_methods.dart';
 
 void main() {
   patrolTest('Create new mail', nativeAutomation: true, ($) async {
-<<<<<<< Updated upstream
     await startApp($);
-    await enterMailSystem($);
-    await $(K.replyFab).tap();
-=======
-    await startAppTest($);
     await navigateToEmail($);
-    await $(K.ReplyFab).tap();
->>>>>>> Stashed changes
+    await $(K.replyFab).tap();
     await $(K.subjectTextField).enterText('Lorem ipsum');
     await $(K.mailTextContent).enterText('Lorem ipsum');
     await $(K.mailSendButton).tap();
