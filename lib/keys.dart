@@ -6,9 +6,9 @@ class Keys {
   const Keys();
 
   static const studyDemoList = Key('studyDemoList');
-  static const createMailButton = Key('createMailButton');
+  static const ReplyFab = Key('ReplyFab');
   static const subjectTextField = Key('subjectTextField');
   static const mailTextContent = Key('mailTextContent');
   static const mailSendButton = Key('mailSendButton');
-  static const mailList = Key('mailList');
+  static const email = Key('email');
 }

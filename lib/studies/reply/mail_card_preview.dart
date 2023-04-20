@@ -60,7 +60,7 @@ class MailPreviewCard extends StatelessWidget {
           return mailPreview;
         } else {
           return Dismissible(
-            key: K.mailList,
+            key: K.email,
             dismissThresholds: const {
               DismissDirection.startToEnd: 0.8,
               DismissDirection.endToStart: 0.4,
