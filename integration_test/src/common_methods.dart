@@ -8,5 +8,4 @@ Future<void> startApp(PatrolTester $) async {
 
 Future<void> navigateToEmail(PatrolTester $) async {
   await $(K.studyDemoList).tap();
-  await $(K.email).waitUntilVisible();
 }
