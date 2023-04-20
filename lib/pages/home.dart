@@ -11,6 +11,7 @@ import 'package:flutter_gen/gen_l10n/gallery_localizations.dart';
 import 'package:gallery/constants.dart';
 import 'package:gallery/data/demos.dart';
 import 'package:gallery/data/gallery_options.dart';
+import 'package:gallery/keys.dart';
 import 'package:gallery/layout/adaptive.dart';
 import 'package:gallery/pages/category_list_item.dart';
 import 'package:gallery/pages/settings.dart';
@@ -821,7 +822,7 @@ class _MobileCarouselState extends State<_MobileCarousel>
       controller: widget.animationController,
       child: PageView.builder(
         // Makes integration tests possible.
-        key: const ValueKey('studyDemoList'),
+        key: K.studyDemoList,
         onPageChanged: (value) {
           setState(() {
             _currentPage.value = value;

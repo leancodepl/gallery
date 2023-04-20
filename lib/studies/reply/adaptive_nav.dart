@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_gen/gen_l10n/gallery_localizations.dart';
 import 'package:gallery/data/gallery_options.dart';
+import 'package:gallery/keys.dart';
 import 'package:gallery/layout/adaptive.dart';
 import 'package:gallery/studies/reply/app.dart';
 import 'package:gallery/studies/reply/bottom_drawer.dart';
@@ -1219,7 +1220,7 @@ class _ReplyFabState extends State<_ReplyFab>
               return Tooltip(
                 message: tooltip,
                 child: InkWell(
-                  key: const ValueKey('ReplyFab'),
+                  key: K.replyFab,
                   customBorder: circleFabBorder,
                   onTap: openContainer,
                   child: SizedBox(
