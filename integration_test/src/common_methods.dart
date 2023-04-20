@@ -1,7 +1,6 @@
-import 'package:patrol/patrol.dart';
-import 'package:gallery/main.dart';
 import 'package:gallery/keys.dart';
-import 'package:flutter/foundation.dart';
+import 'package:gallery/main.dart';
+import 'package:patrol/patrol.dart';
 
 Future<void> startApp(PatrolTester $) async {
   await $.pumpWidgetAndSettle(const GalleryApp());

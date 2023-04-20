@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:gallery/keys.dart';
 import 'package:gallery/studies/reply/model/email_model.dart';
 import 'package:gallery/studies/reply/model/email_store.dart';
 import 'package:gallery/studies/reply/profile_avatar.dart';
