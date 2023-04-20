@@ -66,12 +66,13 @@ class _MailViewHeader extends StatelessWidget {
           children: [
             Expanded(
               child: SelectableText(
+                key: K.emailSubject,
                 email.subject,
                 style: textTheme.headlineMedium!.copyWith(height: 1.1),
               ),
             ),
             IconButton(
-              key: const ValueKey('ReplyExit'),
+              key: K.mailBackButton,
               icon: const Icon(Icons.keyboard_arrow_down),
               onPressed: () {
                 Provider.of<EmailStore>(
