@@ -15,6 +15,6 @@ class Keys {
   static const deleteMessage = Key('deleteMessage');
   static const inboxList = Key('inboxList');
   static const inboxListTiles = Key('inboxListTiles');
-  static const star_email_button = Key('star_email_button');
-  static const ReplyExit = Key('ReplyExit');
+  static const starEmailButton = Key('starEmailButton');
+  static const replyExit = Key('exitMessage');
 }

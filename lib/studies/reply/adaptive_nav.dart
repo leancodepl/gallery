@@ -853,7 +853,7 @@ class _BottomAppBarActionItems extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
                         IconButton(
-                          key: K.star_email_button,
+                          key: K.starEmailButton,
                           icon: ImageIcon(
                             const AssetImage(
                               '$_iconAssetLocation/twotone_star.png',
