@@ -7,7 +7,7 @@ import 'src/common_methods.dart';
 
 void main() {
   patrolTest('Delete existing mail', nativeAutomation: true, ($) async {
-    await startApp($);
+    await startFlutterGallery($);
     await navigateToEmail($);
     await $(K.email).tap();
     final deletedSubject =
@@ -16,7 +16,7 @@ void main() {
     await $(K.deleteMessage).tap();
     expect($(subjectText), findsNothing);
     await $(K.inboxList).tap();
-    await $(K.inboxListTiles).at(3).tap();
+    await $(K.inboxListTiles).containing('Bin').tap();
     expect($(subjectText), findsOneWidget);
     await $(K.email).waitUntilVisible();
   });

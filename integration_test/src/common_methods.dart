@@ -2,7 +2,7 @@ import 'package:gallery/keys.dart';
 import 'package:gallery/main.dart';
 import 'package:patrol/patrol.dart';
 
-Future<void> startApp(PatrolTester $) async {
+Future<void> startFlutterGallery(PatrolTester $) async {
   await $.pumpWidgetAndSettle(const GalleryApp());
 }
 

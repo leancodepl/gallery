@@ -73,7 +73,7 @@ class _MailViewHeader extends StatelessWidget {
               ),
             ),
             IconButton(
-              key: K.mailBackButton,
+              key: K.ReplyExit,
               icon: const Icon(Icons.keyboard_arrow_down),
               onPressed: () {
                 Provider.of<EmailStore>(

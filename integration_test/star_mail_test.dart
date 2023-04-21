@@ -6,17 +6,17 @@ import 'package:patrol/patrol.dart';
 import 'src/common_methods.dart';
 
 void main() {
-  patrolTest('Create new mail', nativeAutomation: true, ($) async {
-    await startApp($);
+  patrolTest('Star mail', nativeAutomation: true, ($) async {
+    await startFlutterGallery($);
     await navigateToEmail($);
     await $(K.email).tap();
     final deletedSubject =
         $(K.emailSubject).evaluate().first.widget as SelectableText;
     final subjectText = deletedSubject.data;
-    await $(K.starEmailButton).tap();
-    await $(K.mailBackButton).tap();
+    await $(K.star_email_button).tap();
+    await $(K.ReplyExit).tap();
     await $(K.inboxList).tap();
-    await $(K.inboxListTiles).at(1).tap();
+    await $(K.inboxListTiles).containing('Starred').tap();
     expect($(subjectText), findsOneWidget);
   });
 }
