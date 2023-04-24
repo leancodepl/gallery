@@ -10,9 +10,9 @@ void main() {
     await startFlutterGallery($);
     await navigateToEmail($);
     await $(K.email).tap();
-    final deletedSubject =
+    final messageSubject =
         $(K.emailSubject).evaluate().first.widget as SelectableText;
-    final subjectText = deletedSubject.data;
+    final subjectText = messageSubject.data;
     await $(K.starEmailButton).tap();
     await $(K.replyExit).tap();
     await $(K.inboxList).tap();
