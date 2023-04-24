@@ -11,4 +11,10 @@ class Keys {
   static const mailTextContent = Key('mailTextContent');
   static const mailSendButton = Key('mailSendButton');
   static const email = Key('email');
+  static const emailSubject = Key('emailSubject');
+  static const deleteMessage = Key('deleteMessage');
+  static const inboxList = Key('inboxList');
+  static const inboxListTiles = Key('inboxListTiles');
+  static const starEmailButton = Key('star_email_button');
+  static const replyExit = Key('ReplyExit');
 }

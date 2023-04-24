@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gallery/keys.dart';
 import 'package:gallery/studies/reply/model/email_model.dart';
 import 'package:gallery/studies/reply/model/email_store.dart';
 import 'package:gallery/studies/reply/profile_avatar.dart';
@@ -66,12 +67,13 @@ class _MailViewHeader extends StatelessWidget {
           children: [
             Expanded(
               child: SelectableText(
+                key: K.emailSubject,
                 email.subject,
                 style: textTheme.headlineMedium!.copyWith(height: 1.1),
               ),
             ),
             IconButton(
-              key: const ValueKey('ReplyExit'),
+              key: K.replyExit,
               icon: const Icon(Icons.keyboard_arrow_down),
               onPressed: () {
                 Provider.of<EmailStore>(

@@ -782,6 +782,7 @@ class _AnimatedBottomAppBar extends StatelessWidget {
                                 : FadeTransition(
                                     opacity: fadeOut,
                                     child: Text(
+                                      key: K.inboxList,
                                       navigationDestinations
                                           .firstWhere((destination) {
                                         return destination.type ==
@@ -852,7 +853,7 @@ class _BottomAppBarActionItems extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
                         IconButton(
-                          key: const ValueKey('star_email_button'),
+                          key: K.starEmailButton,
                           icon: ImageIcon(
                             const AssetImage(
                               '$_iconAssetLocation/twotone_star.png',
@@ -877,6 +878,7 @@ class _BottomAppBarActionItems extends StatelessWidget {
                         ),
                         IconButton(
                           icon: const ImageIcon(
+                            key: K.deleteMessage,
                             AssetImage(
                               '$_iconAssetLocation/twotone_delete.png',
                               package: _assetsPackage,
@@ -960,6 +962,7 @@ class _BottomDrawerDestinations extends StatelessWidget {
             );
           },
           child: ListTile(
+            key: K.inboxListTiles,
             mouseCursor: SystemMouseCursors.click,
             leading: ImageIcon(
               AssetImage(
