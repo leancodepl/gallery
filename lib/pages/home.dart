@@ -62,6 +62,7 @@ class HomePage extends StatelessWidget {
         studyRoute: reply_routes.homeRoute,
       ),
       _CarouselCard(
+        key: K.shrineAppTab,
         demo: studyDemos['shrine'],
         asset: const AssetImage(
           'assets/studies/shrine_card.png',
@@ -1041,6 +1042,7 @@ class _DesktopPageButton extends StatelessWidget {
 class _CarouselCard extends StatelessWidget {
   const _CarouselCard({
     required this.demo,
+    this.key,
     this.asset,
     this.assetDark,
     this.assetColor,
@@ -1050,6 +1052,7 @@ class _CarouselCard extends StatelessWidget {
   });
 
   final GalleryDemo? demo;
+  final Key? key;
   final ImageProvider? asset;
   final ImageProvider? assetDark;
   final Color? assetColor;

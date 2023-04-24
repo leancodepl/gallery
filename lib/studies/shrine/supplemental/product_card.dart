@@ -4,6 +4,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/gallery_localizations.dart';
+import 'package:gallery/keys.dart';
 import 'package:gallery/layout/adaptive.dart';
 import 'package:gallery/layout/image_placeholder.dart';
 import 'package:gallery/studies/shrine/model/app_state_model.dart';
@@ -106,6 +107,7 @@ Widget _buildProductCard({
       );
     },
     child: Stack(
+      key: K.productStackList,
       children: [
         Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -126,6 +128,7 @@ Widget _buildProductCard({
                   SizedBox(
                     width: imageWidth,
                     child: Text(
+                      key: K.productItem,
                       product.name(context),
                       style: theme.textTheme.labelLarge,
                       softWrap: true,

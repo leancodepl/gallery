@@ -6,6 +6,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/gallery_localizations.dart';
+import 'package:gallery/keys.dart';
 import 'package:gallery/layout/adaptive.dart';
 import 'package:gallery/layout/text_scale.dart';
 import 'package:gallery/studies/shrine/colors.dart';
@@ -411,6 +412,7 @@ class ExpandingBottomSheetState extends State<ExpandingBottomSheet> {
           Row(
             children: [
               AnimatedPadding(
+                key: K.shoppingCartButton,
                 padding: _horizontalCartPaddingFor(numProducts),
                 duration: const Duration(milliseconds: 225),
                 child: const Icon(Icons.shopping_cart),

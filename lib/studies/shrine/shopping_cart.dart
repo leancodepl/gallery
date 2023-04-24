@@ -5,6 +5,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_gen/gen_l10n/gallery_localizations.dart';
+import 'package:gallery/keys.dart';
 import 'package:gallery/layout/letter_spacing.dart';
 import 'package:gallery/studies/shrine/colors.dart';
 import 'package:gallery/studies/shrine/expanding_bottom_sheet.dart';
@@ -61,6 +62,7 @@ class _ShoppingCartPageState extends State<ShoppingCartPage> {
                           SizedBox(
                             width: _startColumnWidth,
                             child: IconButton(
+                              key: K.shoppingCartReturn,
                               icon: const Icon(Icons.keyboard_arrow_down),
                               onPressed: () => expandingBottomSheet!.close(),
                               tooltip: localizations.shrineTooltipCloseCart,
@@ -295,6 +297,7 @@ class ShoppingCartRow extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Image.asset(
+                        key: K.shoppingCartList,
                         product.assetName,
                         package: product.assetPackage,
                         fit: BoxFit.cover,
