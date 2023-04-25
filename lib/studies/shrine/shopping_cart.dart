@@ -105,6 +105,7 @@ class _ShoppingCartPageState extends State<ShoppingCartPage> {
                   child: Semantics(
                     sortKey: const OrdinalSortKey(3, name: _ordinalSortKeyName),
                     child: ElevatedButton(
+                      key: K.clearBasketButton,
                       style: ElevatedButton.styleFrom(
                         shape: const BeveledRectangleBorder(
                           borderRadius: BorderRadius.all(Radius.circular(7)),
@@ -281,6 +282,7 @@ class ShoppingCartRow extends StatelessWidget {
               child: SizedBox(
                 width: _startColumnWidth,
                 child: IconButton(
+                  key: K.removeBasketProductButton,
                   icon: const Icon(Icons.remove_circle_outline),
                   onPressed: onPressed,
                   tooltip: localizations.shrineTooltipRemoveItem,
@@ -297,7 +299,6 @@ class ShoppingCartRow extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Image.asset(
-                        key: K.shoppingCartList,
                         product.assetName,
                         package: product.assetPackage,
                         fit: BoxFit.cover,
@@ -329,6 +330,7 @@ class ShoppingCartRow extends StatelessWidget {
                                 ),
                               ),
                               SelectableText(
+                                key: K.shoppingCartList,
                                 product.name(context),
                                 style: localTheme.textTheme.titleMedium!
                                     .copyWith(fontWeight: FontWeight.w600),

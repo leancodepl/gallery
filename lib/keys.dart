@@ -26,4 +26,6 @@ class Keys {
   static const productStackList = Key('productStackList');
   static const shoppingCartReturn = Key('shoppingCartReturn');
   static const shoppingCartList = Key('shoppingCartList');
+  static const removeBasketProductButton = Key('removeBasketProductButton');
+  static const clearBasketButton = Key('clearBasketButton');
 }
