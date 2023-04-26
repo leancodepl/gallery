@@ -21,11 +21,11 @@ class Keys {
   static const shrinePasswordField = Key('shrinePasswordField');
   static const shrineAppTab = Key('shrineAppTab');
   static const shrineContextMenu = Key('shrineContextMenu');
-  static const productItem = Key('productItem');
+  static const basketItemName = Key('basketItemName');
   static const shoppingCartButton = Key('shoppingCartButton');
-  static const productStackList = Key('productStackList');
+  static const productStackListTile = Key('productStackListTile');
   static const shoppingCartReturn = Key('shoppingCartReturn');
-  static const shoppingCartList = Key('shoppingCartList');
+  static const shoppingCartItemTile = Key('shoppingCartItemTile');
   static const removeBasketProductButton = Key('removeBasketProductButton');
   static const clearBasketButton = Key('clearBasketButton');
 }

@@ -17,7 +17,7 @@ void main() {
     expect($(subjectText), findsNothing);
     await $(K.inboxList).tap();
     await $(K.inboxListTiles).containing('Bin').tap();
-    await $(subjectText).waitUntilExists();
+    await $(subjectText).waitUntilVisible();
     await $(K.email).waitUntilVisible();
   });
 }

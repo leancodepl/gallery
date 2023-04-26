@@ -107,7 +107,7 @@ Widget _buildProductCard({
       );
     },
     child: Stack(
-      key: K.productStackList,
+      key: K.productStackListTile,
       children: [
         Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -128,7 +128,7 @@ Widget _buildProductCard({
                   SizedBox(
                     width: imageWidth,
                     child: Text(
-                      key: K.productItem,
+                      key: K.basketItemName,
                       product.name(context),
                       style: theme.textTheme.labelLarge,
                       softWrap: true,

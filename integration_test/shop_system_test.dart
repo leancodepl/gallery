@@ -11,6 +11,7 @@ void main() {
     await testShrineLoginSystem($);
     await testCartForEachCategory($);
     await testBasketProductRemoval($);
+    await testBasketClear($);
     await $(K.shoppingCartReturn).tap();
     await $(K.shrineContextMenu).tap();
     await $('LOGOUT').tap();
@@ -33,10 +34,10 @@ Future<void> testCartForEachCategory(PatrolTester $) async {
     await $(K.shrineContextMenu).tap();
     await $(shoppingCategories[i]).tap();
     final firstCategoryProduct =
-        $(K.productStackList).at(0).$(K.productItem).text;
-    await $(K.productStackList).at(0).tap();
+        $(K.productStackListTile).at(0).$(K.basketItemName).text;
+    await $(K.productStackListTile).at(0).tap();
     await $(K.shoppingCartButton).tap();
-    await $(K.shoppingCartList).$(firstCategoryProduct).waitUntilVisible();
+    await $(K.shoppingCartItemTile).$(firstCategoryProduct).waitUntilVisible();
     await $(K.shoppingCartReturn).tap();
   }
 }
@@ -44,11 +45,14 @@ Future<void> testCartForEachCategory(PatrolTester $) async {
 Future<void> testBasketProductRemoval(PatrolTester $) async {
   await $(K.shoppingCartButton).tap();
   final basketProduct =
-      $(K.shoppingCartList).evaluate().first.widget as SelectableText;
+      $(K.shoppingCartItemTile).evaluate().first.widget as SelectableText;
   final deletedProduct = basketProduct.data;
   await $(K.removeBasketProductButton).tap();
   expect($(deletedProduct), findsNothing);
+}
+
+Future<void> testBasketClear(PatrolTester $) async {
   await $(K.clearBasketButton).tap();
   await $(K.shoppingCartButton).tap();
-  expect($(K.shoppingCartList).exists, equals(false));
+  expect($(K.shoppingCartItemTile), findsNothing);
 }

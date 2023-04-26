@@ -330,7 +330,7 @@ class ShoppingCartRow extends StatelessWidget {
                                 ),
                               ),
                               SelectableText(
-                                key: K.shoppingCartList,
+                                key: K.shoppingCartItemTile,
                                 product.name(context),
                                 style: localTheme.textTheme.titleMedium!
                                     .copyWith(fontWeight: FontWeight.w600),
