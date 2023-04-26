@@ -5,6 +5,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_gen/gen_l10n/gallery_localizations.dart';
+import 'package:gallery/keys.dart';
 import 'package:gallery/layout/letter_spacing.dart';
 import 'package:gallery/studies/shrine/colors.dart';
 import 'package:gallery/studies/shrine/expanding_bottom_sheet.dart';
@@ -61,6 +62,7 @@ class _ShoppingCartPageState extends State<ShoppingCartPage> {
                           SizedBox(
                             width: _startColumnWidth,
                             child: IconButton(
+                              key: K.shoppingCartReturn,
                               icon: const Icon(Icons.keyboard_arrow_down),
                               onPressed: () => expandingBottomSheet!.close(),
                               tooltip: localizations.shrineTooltipCloseCart,
@@ -103,6 +105,7 @@ class _ShoppingCartPageState extends State<ShoppingCartPage> {
                   child: Semantics(
                     sortKey: const OrdinalSortKey(3, name: _ordinalSortKeyName),
                     child: ElevatedButton(
+                      key: K.clearBasketButton,
                       style: ElevatedButton.styleFrom(
                         shape: const BeveledRectangleBorder(
                           borderRadius: BorderRadius.all(Radius.circular(7)),
@@ -279,6 +282,7 @@ class ShoppingCartRow extends StatelessWidget {
               child: SizedBox(
                 width: _startColumnWidth,
                 child: IconButton(
+                  key: K.removeBasketProductButton,
                   icon: const Icon(Icons.remove_circle_outline),
                   onPressed: onPressed,
                   tooltip: localizations.shrineTooltipRemoveItem,
@@ -326,6 +330,7 @@ class ShoppingCartRow extends StatelessWidget {
                                 ),
                               ),
                               SelectableText(
+                                key: K.shoppingCartItemTile,
                                 product.name(context),
                                 style: localTheme.textTheme.titleMedium!
                                     .copyWith(fontWeight: FontWeight.w600),

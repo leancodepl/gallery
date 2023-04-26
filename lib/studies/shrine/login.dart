@@ -7,6 +7,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/gallery_localizations.dart';
 import 'package:gallery/data/gallery_options.dart';
+import 'package:gallery/keys.dart';
 import 'package:gallery/layout/adaptive.dart';
 import 'package:gallery/layout/image_placeholder.dart';
 import 'package:gallery/layout/letter_spacing.dart';
@@ -114,6 +115,7 @@ class _UsernameTextField extends StatelessWidget {
     final colorScheme = Theme.of(context).colorScheme;
 
     return TextField(
+      key: K.shrineUsernameField,
       textInputAction: TextInputAction.next,
       restorationId: 'username_text_field',
       cursorColor: colorScheme.onSurface,
@@ -135,6 +137,7 @@ class _PasswordTextField extends StatelessWidget {
     final colorScheme = Theme.of(context).colorScheme;
 
     return TextField(
+      key: K.shrinePasswordField,
       restorationId: 'password_text_field',
       cursorColor: colorScheme.onSurface,
       obscureText: true,
