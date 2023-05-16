@@ -78,6 +78,7 @@ class HomePage extends StatelessWidget {
         studyRoute: shrine_routes.loginRoute,
       ),
       _CarouselCard(
+        key: K.rallyAppTab,
         demo: studyDemos['rally'],
         textColor: RallyColors.accountColors[0],
         asset: const AssetImage(
