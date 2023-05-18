@@ -10,7 +10,7 @@ void main() {
       ($) async {
     await startFlutterGallery($);
     await testRallyLoginSystem($);
-    await testRallyOvervierviewCategory($);
+    await testRallyOverviewCategory($);
     await $(K.financeCategoryMenu).at(1).tap();
     await testCategory($);
     await swipeUntilVisible(
@@ -37,7 +37,7 @@ Future<void> testRallyLoginSystem(PatrolTester $) async {
   await $(K.rallyLoginButton).tap();
 }
 
-Future<void> testRallyOvervierviewCategory(PatrolTester $) async {
+Future<void> testRallyOverviewCategory(PatrolTester $) async {
   await $('Accounts').scrollTo();
   await $('Bills').scrollTo();
   await $('Budgets').scrollTo();
@@ -56,10 +56,7 @@ Future<void> testCategory(PatrolTester $) async {
         $(K.singleValueInList).at(i).text!.substring(1).replaceAll(',', ''));
     valuesSum += singleAmount;
   }
-  print(valuesSum.floorToDouble());
-  if (valuesSum.floorToDouble() != totalValue) {
-    throw Exception('Total value not legitemate with summary values');
-  }
+  expect(valuesSum.floorToDouble(), totalValue);
 }
 
 Future<void> swipeUntilVisible({
@@ -77,5 +74,9 @@ Future<void> swipeUntilVisible({
     await $.tester.drag(viewPatrolFinder, step);
     await $.pumpAndSettle();
     iterationsLeft -= 1;
+  }
+  if (iterationsLeft <= 0) {
+    throw Exception(
+        'After trying to scroll to $finder, there was no such widget');
   }
 }
