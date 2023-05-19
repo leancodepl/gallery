@@ -7,6 +7,7 @@ import 'dart:math' as math;
 import 'package:flutter/material.dart';
 
 import 'package:gallery/data/gallery_options.dart';
+import 'package:gallery/keys.dart';
 import 'package:gallery/layout/letter_spacing.dart';
 import 'package:gallery/layout/text_scale.dart';
 import 'package:gallery/studies/rally/colors.dart';
@@ -185,6 +186,7 @@ class _AnimatedRallyPieChart extends AnimatedWidget {
                 style: labelTextStyle,
               ),
               SelectableText(
+                key: K.totalCenterAmount,
                 usdWithSignFormat(context).format(centerAmount),
                 style: headlineStyle,
               ),

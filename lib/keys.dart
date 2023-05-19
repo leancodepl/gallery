@@ -28,4 +28,12 @@ class Keys {
   static const shoppingCartItemTile = Key('shoppingCartItemTile');
   static const removeBasketProductButton = Key('removeBasketProductButton');
   static const clearBasketButton = Key('clearBasketButton');
+  static const rallyAppTab = Key('rallyAppTab');
+  static const rallyUsernameField = Key('rallyUsernameField');
+  static const rallyPasswordField = Key('rallyPasswordField');
+  static const rallyLoginButton = Key('rallyLoginButton');
+  static const financeCategoryMenu = Key('financeCategoryMenu');
+  static const totalCenterAmount = Key('totalCenterAmount');
+  static const valuesAmmountList = Key('valuesAmmountList');
+  static const singleValueInList = Key('singleValueInList');
 }

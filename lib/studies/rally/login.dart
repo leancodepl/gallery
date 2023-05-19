@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_gen/gen_l10n/gallery_localizations.dart';
 import 'package:gallery/data/gallery_options.dart';
+import 'package:gallery/keys.dart';
 import 'package:gallery/layout/adaptive.dart';
 import 'package:gallery/layout/image_placeholder.dart';
 import 'package:gallery/layout/text_scale.dart';
@@ -227,6 +228,7 @@ class _UsernameInput extends StatelessWidget {
       child: Container(
         constraints: BoxConstraints(maxWidth: maxWidth ?? double.infinity),
         child: TextField(
+          key: K.rallyUsernameField,
           autofillHints: const [AutofillHints.username],
           textInputAction: TextInputAction.next,
           controller: usernameController,
@@ -255,6 +257,7 @@ class _PasswordInput extends StatelessWidget {
       child: Container(
         constraints: BoxConstraints(maxWidth: maxWidth ?? double.infinity),
         child: TextField(
+          key: K.rallyPasswordField,
           controller: passwordController,
           decoration: InputDecoration(
             labelText: GalleryLocalizations.of(context)!.rallyLoginPassword,
@@ -318,6 +321,7 @@ class _ThumbButtonState extends State<_ThumbButton> {
               }
             },
             child: Container(
+              key: K.rallyLoginButton,
               decoration: borderDecoration,
               height: 120,
               child: ExcludeSemantics(

@@ -5,6 +5,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/gallery_localizations.dart';
 import 'package:gallery/data/gallery_options.dart';
+import 'package:gallery/keys.dart';
 import 'package:gallery/layout/adaptive.dart';
 import 'package:gallery/layout/text_scale.dart';
 import 'package:gallery/studies/rally/tabs/accounts.dart';
@@ -348,6 +349,7 @@ class _RallyTabState extends State<_RallyTab>
     return ConstrainedBox(
       constraints: const BoxConstraints(minHeight: 56),
       child: Row(
+        key: K.financeCategoryMenu,
         children: [
           FadeTransition(
             opacity: _iconFadeAnimation,
